@@ -7,11 +7,11 @@
     <span [class.open]="menuOpen"></span>
     <span [class.open]="menuOpen"></span>
   </button>
-  <nav [class.open]="menuOpen">
+  <nav [class.open]="menuOpen || isDesktop">
     <ul>
-      <li><a href="#projetos" (click)="menuOpen = false">Projetos</a></li>
-      <li><a href="#sobre" (click)="menuOpen = false">Sobre</a></li>
-      <li><a href="#contato" (click)="menuOpen = false">Contato</a></li>
+      <li><a href="#projetos" (click)="closeMenuIfMobile()">Projetos</a></li>
+      <li><a href="#sobre" (click)="closeMenuIfMobile()">Sobre</a></li>
+      <li><a href="#contato" (click)="closeMenuIfMobile()">Contato</a></li>
     </ul>
   </nav>
 </header>
